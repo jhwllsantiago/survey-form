@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  background-image: url(./assests/rpg-1.jpg);
+  background-size: cover;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.survey-info {
+  display: block;
+  height: fit-content;
+  max-width: 500px;
+  margin: 120px auto;
+  background-color: black;
+  padding: 25px 25px;
+  border-radius: 10px;
+}
+
+h1.survey-info-text {
+  text-align: center;
+}
+
+.survey-info-text {
+  color: white;
+  text-align: justify;
+  text-justify: inter-word;
+  list-style-position: inside;
+  margin-bottom: 20px;
+}
+
+span.survey-info-text {
+  cursor: pointer;
+}
+
+span.survey-info-text:hover {
+  color: red;
+}
+
+#form {
+  display: none;
+}
+
+.form {
+  background-color: black;
+  color: white;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px 25px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.form-section {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+}
+
+.form-section input[type="number"] {
+  width: 100%;
+}
+
+.form-section select {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.form-section input[type="text"]:focus,
+.form-section input[type="email"]:focus,
+.form-section input[type="number"]:focus {
+  box-shadow: #555;
+  background-color: lightblue;
+}
+
+.form-section-split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-section input[type="radio"],
+.form-section input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+}
+
+.selection-label:hover {
+  color: skyblue;
+  cursor: pointer;
+}
+
+#button-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 200px;
+  margin-bottom: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: skyblue;
+  text-align: center;
+  height: 1.5em;
+  margin-bottom: 10px;
+}
+
+.hr-text:before {
+  content: "";
+  background-color: skyblue;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: skyblue;
+  background-color: black;
+}
+
+blockquote {
+  text-align: justify;
+  text-justify: inter-word;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  color: black;
+  border-radius: 5px;
+  display: block;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote::after {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+#div-quote {
+  display: flex;
+}
+
+#div-quote img {
+  max-width: 100%;
+  margin-top: 25px;
+}

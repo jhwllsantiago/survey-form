@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="survey-info" id="survey-info">
+        <h1 class="survey-info-text" id="title">RPG Gaming Club</h1>
+        <p class="survey-info-text" id="description">
+          Greetings!<br /><br />
+          A club is an association of people united by a common interest or
+          goal. A service club, for example, exists for voluntary or charitable
+          activities. There are clubs devoted to hobbies and sports, social
+          activities clubs, political and religious clubs, and so forth.
+        </p>
+        <p class="survey-info-text">A few words from the President:</p>
+        <div id="div-quote">
+          <div><img src="./assests/guy.jpg" /></div>
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </blockquote>
+        </div>
+        <span class="survey-info-text" onclick="displayFunction()">
+          Proceed to survey.
+        </span>
+      </section>
+      <section class="form" id="form">
+        <form
+          action="./thankyou.html"
+          method="get"
+          id="survey-form"
+          name="survey-form"
+        >
+          <h1>Club Survey Form</h1>
+          <hr class="hr-text" data-content="Personal Info" />
+          <div class="form-section">
+            <label for="name" id="name-label">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Forename Surname"
+              maxlength="40"
+              required
+            />
+          </div>
+          <div class="form-section">
+            <label for="email" id="email-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@domain.com"
+              maxlength="40"
+              required
+            />
+          </div>
+          <div class="form-section-split">
+            <div class="form-section" id="number-div">
+              <label for="number" id="number-label">Age</label>
+              <input
+                type="number"
+                id="number"
+                name="number"
+                placeholder="18"
+                min="18"
+                max="99"
+                step="1"
+                required
+              />
+            </div>
+            <div class="form-section" id="dropdown-div">
+              <label for="dropdown" id="dropdown-label"
+                >Weekly Gaming Hours</label
+              >
+              <select name="dropdown" id="dropdown" required>
+                <option hidden disabled selected value>Select an option</option>
+                <option value="3">less than three hours</option>
+                <option value="3-6">three to six hours</option>
+                <option value="6-10">six to ten hours</option>
+                <option value="10">more than ten hours</option>
+              </select>
+            </div>
+          </div>
+          <hr class="hr-text" data-content="Questions" />
+          <div class="form-section">
+            <label id="radio-label"
+              >Which class do you often play as?</label
+            >
+            <label class="selection-label">
+              <input type="radio" name="attribute" value="tank" /> Tank
+            </label>
+            <label class="selection-label">
+              <input type="radio" name="attribute" value="healer" /> Healer
+            </label>
+            <label class="selection-label">
+              <input type="radio" name="attribute" value="melee" />
+              Damage-dealer (Melee)
+            </label>
+            <label class="selection-label">
+              <input type="radio" name="attribute" value="ranged" />
+              Damage-dealer (Ranged)
+            </label>
+            <label class="selection-label">
+              <input type="radio" name="attribute" value="caster" />
+              Damage-dealer (Caster)
+            </label>
+          </div>
+          <div class="form-section">
+            <label id="checkbox-label">What games have you played?</label>
+            <label class="selection-label">
+              <input type="checkbox" name="game-1" value="true" /> Mass Effect
+              Trilogy
+            </label>
+            <label class="selection-label">
+              <input type="checkbox" name="game-2" value="true" /> The Elder
+              Scrolls (III, IV, V)
+            </label>
+            <label class="selection-label">
+              <input type="checkbox" name="game-3" value="true" /> Final Fantasy
+              Series
+            </label>
+            <label class="selection-label">
+              <input type="checkbox" name="game-4" value="true" /> Pillars of
+              Eternity (I, II)
+            </label>
+            <label class="selection-label">
+              <input type="checkbox" name="game-5" value="true" /> Fallout (3,
+              4)
+            </label>
+            <label class="selection-label">
+              <input type="checkbox" name="game-6" value="true" /> Dragon Age
+              (Origins, Inquisition)
+            </label>
+            <label class="selection-label">
+              <input type="checkbox" name="game-others" value="true" /> Others
+            </label>
+          </div>
+          <div class="form-section">
+            <label for="notes">Notes</label>
+            <textarea
+              name="notes"
+              id="notes"
+              cols="30"
+              rows="3"
+              placeholder="Enter other games here!"
+            ></textarea>
+          </div>
+          <div id="button-div">
+            <button type="reset"><b>Clear</b></button>
+            <button type="submit"><b>Submit</b></button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script>
+      function displayFunction() {
+        var x = document.getElementById("form");
+        var y = document.getElementById("survey-info");
+        x.style.display = "block";
+        y.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
